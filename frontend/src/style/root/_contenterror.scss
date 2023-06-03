@@ -1,0 +1,16 @@
+.content-error
+{
+	flex-grow: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	span
+	{
+		padding: 1.5rem 4rem;
+
+		background-color: $bg2-color;
+		border-radius: $radius;
+	}
+}

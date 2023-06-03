@@ -1,0 +1,39 @@
+header
+{
+	padding: .5rem 1rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	background-color: $bg2-color;
+
+	font-size: 1.1rem;
+
+	a
+	{
+		font-size: 1.6rem;
+		font-weight: 500;
+
+		&.active
+		{
+			color: $fg-color !important;
+		}
+
+		img
+		{
+			border-radius: $radius;
+		}
+	}
+
+	> * // direct child
+	{
+		display: flex;
+		align-items: center;
+
+		> *:not(:last-child) // for element
+		{
+			margin-right: .5rem;
+		}
+	}
+}

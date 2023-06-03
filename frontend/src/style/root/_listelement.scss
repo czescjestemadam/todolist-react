@@ -1,0 +1,11 @@
+.content .home-link
+{
+	&:not(:last-of-type)
+	{
+		margin-bottom: .5rem;
+	}
+
+	@extend button;
+
+	@extend .nolink;
+}

@@ -1,0 +1,70 @@
+.content
+{
+	form
+	{
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.content .element
+{
+	flex-grow: 1;
+
+	padding: 1rem;
+
+	background-color: $bg2-color;
+	border-radius: $radius;
+
+	@media (max-width: $content-narrow)
+	{
+		padding: 0;
+		background-color: inherit;
+		border-radius: 0;
+	}
+
+	p:first-of-type // title
+	{
+		text-align: center;
+		border-bottom: 1px dashed $bg3-color;
+		padding: 1rem;
+		margin: 0;
+
+		font-size: 1.5rem;
+		font-weight: 700;
+	}
+
+	p:not(:first-of-type) // content
+	{
+		flex-grow: 1;
+
+		textarea
+		{
+			height: 100%;
+			overflow: auto;
+			resize: none;
+		}
+	}
+
+	&.list-edit, &.note-edit
+	{
+		form
+		{
+			flex-direction: column;
+
+			height: 100%;
+
+			p:first-of-type .element-edit
+			{
+				font-size: 1.5rem;
+				font-weight: 700;
+				text-align: center;
+			}
+
+			.element-edit
+			{
+				width: 100%;
+			}
+		}
+	}
+}

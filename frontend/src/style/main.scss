@@ -1,0 +1,39 @@
+@import "vars";
+
+@import "input";
+@import "link";
+
+@import "login";
+
+@import "root/root";
+@import "root/header";
+@import "root/navbar";
+@import "root/element";
+@import "root/listelement";
+
+@import "root/contenterror";
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	background-color: $bg-color;
+	color: white;
+
+	#root
+	{
+		height: 100%;
+	}
+}
+
+code
+{
+	font-family: monospace;
+}

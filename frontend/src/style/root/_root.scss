@@ -1,0 +1,32 @@
+main
+{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	> div
+	{
+		display: flex;
+		flex-grow: 1;
+
+		.content
+		{
+			display: flex;
+			flex-direction: column;
+			flex-grow: 1;
+			gap: 1rem;
+
+			padding: $content-padding;
+			margin-inline: auto;
+
+			@media (min-width: $content-wide)
+			{
+				max-width: $content-wide;
+			}
+			@media (max-width: $content-narrow)
+			{
+				padding: .5rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+input, button, textarea // fixme button:focus
+{
+	box-sizing: border-box;
+
+	border: 1px solid $fg-color;
+	border-radius: $radius;
+
+	padding: .5rem max(.5rem, $radius);
+
+	background-color: transparent;
+	color: $fg-color;
+
+	&:not([type=button], [type=submit]):focus-visible, &:hover
+	{
+		outline: none;
+
+		border-color: $fg2-color;
+		background-color: $fg2-color;
+		color: black;
+	}
+
+	&[type=button], &[type=submit]
+	{
+		cursor: pointer;
+	}
+
+	&.red
+	{
+		color: red;
+		border-color: red;
+
+		&:hover
+		{
+			color: black;
+			background-color: red;
+		}
+	}
+}

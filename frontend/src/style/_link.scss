@@ -1,0 +1,11 @@
+a.nolink
+{
+	color: inherit;
+	text-underline-color: transparent;
+	text-decoration: none;
+
+	&:visited
+	{
+		color: inherit;
+	}
+}
