@@ -66,8 +66,14 @@ export function checkElementErrors(element)
 	if (!element.title)
 		return { error: "No title" };
 
+	if (element.title.length > 128)
+		return { error: "Title too long (128)" };
+
 	if (!element.content)
 		return { error: "No content" };
+
+	if (element.content.length > 8192)
+		return { error: "Content too long (8192)" };
 
 	return null;
 }
