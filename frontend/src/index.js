@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Root, { rootLoader } from "./routes/root";
 import Login, { loginLoader } from "./routes/login";
+import Register, {registerLoader} from "./routes/register";
 import Home, { homeLoader } from "./routes/home";
 import { Lists, List, listsLoader, listLoader, EditList, listAction } from "./routes/lists";
 import { Notes, Note, notesLoader, noteLoader, EditNote, noteAction } from "./routes/notes";
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
 		path: "/login",
 		element: <Login/>,
 		loader: loginLoader
+	},
+	{
+		path: "/register",
+		element: <Register/>,
+		loader: registerLoader
 	},
 	{
 		path: "/",

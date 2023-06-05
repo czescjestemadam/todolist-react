@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { useNavigate, redirect } from "react-router-dom";
+import { useNavigate, redirect, Link } from "react-router-dom";
 
 import * as store from "../utils/localStor";
 import { api, apiSetup } from "../utils/api";
 
 import InfoMsg from "./components/infomsg";
+import InputSection from "./components/inputsection";
 
 export function loginLoader({ request })
 {
@@ -57,19 +58,14 @@ export default function Login()
 
 				<input type="button" value="Log in" onClick={login}/>
 
+				<Link to="/register" className="nolink">
+					<input type="button" value="or Register"/>
+				</Link>
+
 				{
 					err ? <InfoMsg msg={err} color="red"/> : null
 				}
 			</div>
 		</div>
-	);
-}
-
-function InputSection({ name, type, val, setFunc })
-{
-	return (
-		<section>
-			<input type={type} placeholder={name} value={val} onChange={e => setFunc(e.target.value)}/>
-		</section>
 	);
 }

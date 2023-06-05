@@ -17,7 +17,7 @@ router.post("/", checkCredentialsMiddleware, (req, res) =>
 	});
 });
 
-router.put("/", checkCredentialsMiddleware, /*registerCheckCredentialsMiddleware,*/ (req, res) =>
+router.put("/", checkCredentialsMiddleware, registerCheckCredentialsMiddleware, (req, res) =>
 {
 	if (getUserByName(req.user.name))
 		return res.status(409).json({ error: "User already exists" });
